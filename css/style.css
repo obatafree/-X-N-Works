@@ -1,0 +1,573 @@
+@charset "UTF-8";
+@import url("grid.css");
+
+:root { /* 色変更される場合は、#以降のカラーコードを変更してください IE非対応 */
+    --base-color: #000;
+    --link-color: #666;
+    --linkhover-color: #999;
+    --back-color: #f7f7f7;
+    --border-color: #ccc;
+    --white-color: #fff;
+}
+
+img {
+	max-width:100%;
+	height: auto;/*高さ自動*/
+}
+a {
+    display:block;
+    color: var(--link-color);
+    text-decoration-line: none;
+}
+a:hover { 
+    color: var(--linkhover-color);
+}
+
+/*ヘッダー
+-------------------------------------*/
+.header {
+	display: flex;
+    flex-direction: row;
+    padding: 2rem 0 0 0;
+}
+.header-box {
+	margin-left: auto;
+	margin-top: 2rem;
+}
+.contact-button {
+    padding: 14px 40px;
+    border: 2px solid #E50000;
+    border-radius: 100px;
+    background-color: #E50000;
+    color: #ffffff;
+}
+nav ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+	margin: 1rem 0 0 0;
+}
+nav li {
+	flex: 1 0 auto;
+}
+nav li a {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+nav a:hover {
+    background-color: var(--back-color);   
+}
+nav a {
+    padding: 0.5rem;
+}
+
+@media screen and (min-width: 768px){
+/* PC時はMENUボタンを非表示 */
+#open,#close {
+    display: none !important;
+}
+
+#navi {
+    display: block !important;
+}
+}
+
+@media screen and (max-width: 768px){
+.header {
+	flex-direction: column;
+    margin-bottom: 10px;
+}
+.header #open,#close  {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+nav ul {
+	flex-direction: column;
+}
+.header li {
+	padding-top: 0;
+}
+/* スマホ時はMENUボタンを表示 */
+#open {
+    display: block;
+    background: url(../img/button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+#close  {
+    display: block;
+    background: url(../img/button2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+/* スマホ時はメニューを非表示 */
+#navi {
+    display: none;
+}
+}
+    
+/*メイン画像
+-------------------------------------*/
+div.mainimg{
+    margin:0 0 -1% 0;
+}
+
+.mainimg img {
+    width: 100vw;
+}
+
+/*メインコンテンツ
+-------------------------------------*/
+main {
+}
+section {
+	margin: 5rem 0;
+	padding: 3rem 0;
+}
+.gray-back {
+	background-color: var(--back-color);
+}
+
+/*キャッチコピー
+-------------------------------------*/
+.catch {
+    text-align: center;
+}
+.catch h2 {
+    padding-bottom: 1rem;
+}
+.under {
+    border-bottom: 0.4rem solid var(--base-color);
+    padding:0 1rem 1rem 1rem;
+}
+.center {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+/*申し込みの流れ
+-------------------------------------*/
+.flow.row {
+	margin-bottom: 3rem;
+}
+
+/*フッター
+-------------------------------------*/
+footer {
+    padding: 5rem 0;
+    background-color: #000;
+}
+footer h4 {
+    border-bottom: 3px solid var(--border-color);
+}
+.ftbtm{
+    border: solid 1px #fff;
+    width: 18%;
+    padding: 1rem;
+    margin: 0 3rem;
+}
+.ftbtm a{
+    color: #ffffff!important;
+}
+
+/*お問い合わせ
+-------------------------------------*/
+.contact-box {
+	border: 1px solid var(--border-color);
+	text-align: center;
+	padding: 2rem 0;
+}
+.table {
+	margin: 4rem 0;
+}
+.table th {
+	width: 250px;
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--base-color);
+}
+.copyright a {
+    color: var(--white-color);
+    text-decoration: none;
+	display: inline;
+}
+
+/*ページトップへ戻るボタン
+-------------------------------------*/
+#pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#pagetop a {
+    display: block;
+    background-color: var(--base-color);
+    color: var(--white-color);
+    width: 50px;
+    padding: 10px 5px;
+    text-align: center;
+}
+#pagetop a:hover {
+    background-color: var(--link-color);
+}
+
+/* 幅768px以下の表示
+-------------------------------------*/
+@media screen and (max-width: 768px){
+	
+/*ヘッダー
+-------------------------------------*/
+.header-box {
+	display: none;
+}	
+/*お問い合わせ
+-------------------------------------*/
+.table th {
+	width: 100%;
+	display: block;
+}	
+.table td {
+	display: block;
+}
+}
+
+
+section#zero{
+    background: #000;
+    margin: 0;
+}
+section#zero .container{
+    margin: 2rem auto 0;
+}
+.strong{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.restraint{
+    font-size: 1rem;
+}
+
+.contact-cta{
+    color: #ffffff;
+}
+.contact-cta a{
+    padding: 14px 40px;
+    border: 2px solid #E50000;
+    border-radius: 100px;
+    background-color: #E50000;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px #FFF, 0 0 0 6px #E50000;
+    box-sizing: border-box;
+    font-size: 2.2rem;
+    text-align: center;
+}
+.contact-cta a p{
+    padding: 6px 0 0 0;
+}
+
+.contact-cta2 a{
+    padding: 5px 0;
+    border: 2px solid #E50000;
+    border-radius: 100px;
+    background-color: #E50000;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px #FFF, 0 0 0 6px #E50000;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 35%;
+    margin: 0 auto;
+}
+.contact-cta2 a p{
+    padding: 6px 0 0 0;
+}
+.contact-cta4 img{
+ position: relative;
+ left: 43%;
+ max-width: 58%;
+}
+
+.contact-cta5 img{
+    position: relative;
+    left: 22%;
+   }
+
+.container-one{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2.0rem;
+    position: relative;
+}
+.choosing_001{
+    width: 60%;
+    margin: 15rem auto;
+}
+.r-choosing_001{
+}
+.r-choosing_001 div {
+    margin:4rem auto 0;
+    width: 110%;
+}
+
+
+section#two {
+    background-color: #000000;
+}
+section#two .container-one{
+    width: 60%;
+    margin: 15rem auto;
+    color: #ffffff;
+}
+section#four .container-one{
+    width: 60%;
+    margin: 15rem auto;
+}
+section#five .container-one,section#six .container-one,section#seven .container-one{
+    width: 74%;
+}
+
+h3.mid ,h3.mid2{
+    font-size: 3.5rem;
+    padding-left: 8rem;
+    font-family: YuGothic;
+    font-weight: bold;
+}
+
+h3.mid span.number {
+    font-size: 3rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 20px;
+    display: block;
+    padding-top: 3px;
+    padding-left: 15px;
+    color: #fff;
+  }
+  h3.mid2 span.number {
+    font-size: 3rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 52%;
+    display: block;
+    padding-top: 3px;
+    padding-left: 15px;
+    color: #fff;
+  }
+
+h3.mid:before {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    content: '';
+    background: #E50000;
+  }
+
+  h3.mid2:before {
+    position: absolute;
+    top: 0;
+    left: 52%;
+    width: 45px;
+    height: 45px;
+    content: '';
+    background: #E50000;
+  }
+
+  h3.mid span.marker {
+    background: linear-gradient(transparent 75%, #FFC649 75%);
+    font-size: 3.5rem;
+    display: inline-block;
+    padding-top: 0;
+    padding-left: 0;
+    color: #000000;
+}
+
+section#three{
+    background-image: url(../img/cta2.png);
+    width: 100%;
+    background-position: center;
+    height: 550px;
+    margin: -5rem auto 0;
+    padding: 0;
+}
+
+.pd10rem{
+    padding: 10rem 0 15rem;
+}
+
+.bl{
+    font-weight: bold;
+}
+.binance{
+    width: 75%;
+    margin: 0 auto;
+}
+.binance a{
+    display: inline;
+    text-decoration: underline;
+    color: #0080ff;
+}
+section#four p.center{
+    margin: 5rem auto 1rem;
+}
+section#five{
+    background-color: #000;
+    color: #ffffff;
+    padding: 15rem 0;
+}
+section#five div.choosing_004{
+    position: relative;
+    right: 10%;
+}
+
+section#six .onlineseminar p,section#seven .onlineseminar p{
+    position: relative;
+    left: -60%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.mt2rem{
+    margin-top: 2rem;
+}
+.mt3rem{
+    margin-top: 3rem;
+}
+.mt8rem{
+    margin-top: 8rem;
+}
+
+.boarder{
+    border: 0.5px dashed #000000
+}
+
+.onlineseminar1{
+    width: 80%;
+    margin: 8rem auto 0;
+}
+
+div.onlineseminar1 .span-6{
+    flex: 0 0 50%!important;
+    max-width: 50%!important;
+}
+.onlineseminar2 tbody.one tr,.onlineseminar2 tbody.two th{
+    border: none;
+    padding: 1rem;
+}
+.onlineseminar2 tbody.one th{
+    background: #000;
+    color: #ffffff;
+    padding: 0rem 1rem;
+    text-align: center;
+    border: 12px solid;
+}
+.onlineseminar2 tbody.one td{
+    border: none;
+    color: #091841;
+    font-weight: bold;
+
+}
+.color3{
+   color: #091841; 
+}
+.onlineseminar2 tbody.two th{
+    background: #000;
+    color: #ffffff;
+    padding: 0.2rem 0.2rem;
+    text-align: center;
+    display: block;
+    height: 30px;
+    margin: 31% 0 0;
+}
+.onlineseminar2 tbody.two td{
+    border: none;
+    color: #091841;
+}
+
+.onlineseminar2 tbody.two td.yajirushi{
+    position: relative;
+    left: 13%;
+}
+
+div.voice table{
+    margin: 0 auto;
+}
+
+table tbody.voice{
+    border: solid 1px;
+    display: block;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+section#seven .voice_corner{
+    margin: 0 auto;
+    width: 80%;
+}
+.user{
+    position: relative;
+    top: -47px;
+    left: 20px;
+}
+
+.voice_corner tr td{
+    border: none;
+}
+.voice_corner tr td.komid{
+    border-bottom: solid 1px #000;
+    font-weight: bold;
+    color: #CA3604;
+    font-size: 2rem;
+}
+.center2{
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+section#eight{
+    font-weight: bold;
+}
+section#eight .container-one h2{
+    padding: 1.5rem 0;
+}
+span.color2{
+    color: #CA3604;
+
+}
+
+.container-two{
+    margin: 0 auto;
+    padding: 0 2.0rem;
+    position: relative;
+    width: 60%;
+}
+table.table label{
+    font-weight: bold!important;
+}
+
+table th,td{
+    border: none;
+}
