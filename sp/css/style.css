@@ -573,6 +573,7 @@ section#seven .voice_corner{
 }
 .voice_corner tr td{
     border: none;
+    width: 50%;
 }
 .voice_corner tr td.komid{
     border-bottom: solid 1px #000;
@@ -586,10 +587,10 @@ section#seven .voice_corner{
     text-align: center;
     justify-content: center;
 }
-section#eight{
+section#form{
     font-weight: bold;
 }
-section#eight .container-one h2{
+section#form .container-one h2{
     padding: 1.5rem 0;
 }
 span.color2{

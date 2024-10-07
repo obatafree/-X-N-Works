@@ -527,6 +527,9 @@ section#seven .voice_corner{
     margin: 0 auto;
     width: 80%;
 }
+.voice_corner div.voice{
+    flex:2;
+}
 .user{
     position: relative;
     top: -47px;
@@ -547,10 +550,10 @@ section#seven .voice_corner{
     text-align: center;
     justify-content: center;
 }
-section#eight{
+section#form{
     font-weight: bold;
 }
-section#eight .container-one h2{
+section#form .container-one h2{
     padding: 1.5rem 0;
 }
 span.color2{
